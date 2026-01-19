@@ -97,6 +97,12 @@ Authorization: Bearer np-xxxx
 
 更完整安全说明见：`docs/SECURITY.md`。
 
+## 维护者/二改提示（避免误提交敏感文件）
+
+- 请勿提交：`backend/.env`、`.env`、`backend/data/*.db*`、`*.sqlite*`、`*.log`，以及包含真实域名/证书路径的反代配置
+- SQLite 数据库默认会生成在 `backend/data/novelai_pool.db`，其中可能包含用户/密钥/使用日志
+- 建议在提交/推送前先用 `git status` 自查，避免把运行时文件一并上传
+
 ## 文档索引
 
 - `docs/DEPLOYMENT.md`：部署（Ubuntu/宝塔/Nginx/Docker/多机）
@@ -108,6 +114,7 @@ Authorization: Bearer np-xxxx
 ## License
 
 PolyForm Noncommercial License 1.0.0，见 `LICENSE`。
+
 
 
 

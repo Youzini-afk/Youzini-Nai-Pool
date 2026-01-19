@@ -73,7 +73,14 @@ Full guide: `docs/DEPLOYMENT.en.md`.
 
 See `docs/SECURITY.en.md`.
 
+## Maintainer note (avoid committing sensitive files)
+
+- Do not commit: `backend/.env`, `.env`, `backend/data/*.db*`, `*.sqlite*`, `*.log`, or reverse-proxy configs with real domains/cert paths.
+- The runtime SQLite database defaults to `backend/data/novelai_pool.db` and may contain users/keys/usage logs.
+- Before you commit/push, check `git status` to avoid uploading runtime files.
+
 ## License
 
 PolyForm Noncommercial License 1.0.0. See `LICENSE`.
+
 
