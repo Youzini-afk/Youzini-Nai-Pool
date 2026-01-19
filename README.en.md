@@ -73,12 +73,7 @@ Full guide: `docs/DEPLOYMENT.en.md`.
 
 See `docs/SECURITY.en.md`.
 
-## Privacy checklist before publishing to GitHub (Important)
-
-- Do not publish: `backend/.env`, `.env`, `backend/data/*.db*`, any log files, or reverse-proxy configs containing real domains/cert paths.
-- This project creates a SQLite database at runtime (default `backend/data/novelai_pool.db`) which may contain users/keys/usage logs: make sure no `.db/.sqlite` files exist before publishing.
-- Recommended: initialize with `git` and commit (so `.gitignore` applies). Avoid uploading a whole folder/zip via the GitHub web UI, which can accidentally include local databases.
-
 ## License
 
 PolyForm Noncommercial License 1.0.0. See `LICENSE`.
+

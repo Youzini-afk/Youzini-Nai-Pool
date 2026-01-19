@@ -97,12 +97,6 @@ Authorization: Bearer np-xxxx
 
 更完整安全说明见：`docs/SECURITY.md`。
 
-## 上传 GitHub 前的隐私检查（重要）
-
-- 不要上传：`backend/.env`、`.env`、`backend/data/*.db*`、日志文件、反代配置里的真实域名/证书路径
-- 本项目运行时会生成 SQLite 数据库（默认路径 `backend/data/novelai_pool.db`），其中包含用户/密钥/使用日志等敏感信息：发布前请确保目录里没有任何 `.db/.sqlite` 文件
-- 推荐做法：用 `git` 初始化后再提交（让 `.gitignore` 生效），避免用网页“直接上传整个文件夹/zip”把本地数据库一起带上
-
 ## 文档索引
 
 - `docs/DEPLOYMENT.md`：部署（Ubuntu/宝塔/Nginx/Docker/多机）
@@ -114,6 +108,7 @@ Authorization: Bearer np-xxxx
 ## License
 
 PolyForm Noncommercial License 1.0.0，见 `LICENSE`。
+
 
 
 
